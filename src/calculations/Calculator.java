@@ -11,8 +11,7 @@ package calculations;
  * @author adels
  */
 public class Calculator extends javax.swing.JFrame {
-
-    /** Creates new form Calculator */
+    MyCalc  Casio;
     public Calculator() {
         initComponents();
     }
@@ -27,22 +26,27 @@ public class Calculator extends javax.swing.JFrame {
     private void initComponents() {
 
         jButton2 = new javax.swing.JButton();
-        jTextField1 = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
-        jButton8 = new javax.swing.JButton();
-        jButton9 = new javax.swing.JButton();
-        jButton10 = new javax.swing.JButton();
-        jButton11 = new javax.swing.JButton();
-        jButton12 = new javax.swing.JButton();
+        TextArea = new javax.swing.JTextField();
+        Number_0 = new javax.swing.JButton();
+        Number_1 = new javax.swing.JButton();
+        Number_2 = new javax.swing.JButton();
+        Number_3 = new javax.swing.JButton();
+        Number_4 = new javax.swing.JButton();
+        Number_5 = new javax.swing.JButton();
+        Number_8 = new javax.swing.JButton();
+        Number_6 = new javax.swing.JButton();
+        Number_9 = new javax.swing.JButton();
+        Number_7 = new javax.swing.JButton();
         jSeparator1 = new javax.swing.JSeparator();
-        jButton7 = new javax.swing.JButton();
-        jButton13 = new javax.swing.JButton();
-        jButton14 = new javax.swing.JButton();
-        jButton15 = new javax.swing.JButton();
+        Operation_Multiply = new javax.swing.JButton();
+        Operation_Minus = new javax.swing.JButton();
+        Operation_Plus = new javax.swing.JButton();
+        Operation_Divide = new javax.swing.JButton();
+        dot = new javax.swing.JButton();
+        Operation_Equal = new javax.swing.JButton();
+        Clear = new javax.swing.JButton();
+        Operation_Power = new javax.swing.JButton();
+        Operation_Factorial = new javax.swing.JButton();
 
         jButton2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jButton2.setText("1");
@@ -50,84 +54,179 @@ public class Calculator extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jTextField1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jTextField1.setName("textField"); // NOI18N
+        TextArea.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        TextArea.setName("textField"); // NOI18N
 
-        jButton1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jButton1.setText("0");
-        jButton1.setName("0"); // NOI18N
-
-        jButton3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jButton3.setText("1");
-        jButton3.setName("1"); // NOI18N
-
-        jButton4.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jButton4.setText("2");
-        jButton4.setName("2"); // NOI18N
-
-        jButton5.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jButton5.setText("3");
-        jButton5.setName("3"); // NOI18N
-
-        jButton6.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jButton6.setText("4");
-        jButton6.setName("4"); // NOI18N
-
-        jButton8.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jButton8.setText("5");
-        jButton8.setToolTipText("");
-        jButton8.setName("5"); // NOI18N
-
-        jButton9.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jButton9.setText("8");
-        jButton9.setName("8"); // NOI18N
-
-        jButton10.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jButton10.setText("6");
-        jButton10.setName("6"); // NOI18N
-
-        jButton11.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jButton11.setText("9");
-        jButton11.setName("9"); // NOI18N
-
-        jButton12.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jButton12.setText("7");
-        jButton12.setName("7"); // NOI18N
-
-        jButton7.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jButton7.setText("*");
-        jButton7.setToolTipText("");
-        jButton7.setName("*"); // NOI18N
-        jButton7.addActionListener(new java.awt.event.ActionListener() {
+        Number_0.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        Number_0.setText("0");
+        Number_0.setName("0"); // NOI18N
+        Number_0.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton7ActionPerformed(evt);
+                Number_0ActionPerformed(evt);
             }
         });
 
-        jButton13.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jButton13.setText("-");
-        jButton13.setName("-"); // NOI18N
-        jButton13.addActionListener(new java.awt.event.ActionListener() {
+        Number_1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        Number_1.setText("1");
+        Number_1.setName("1"); // NOI18N
+        Number_1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton13ActionPerformed(evt);
+                Number_1ActionPerformed(evt);
             }
         });
 
-        jButton14.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jButton14.setText("+");
-        jButton14.setName("+"); // NOI18N
-        jButton14.addActionListener(new java.awt.event.ActionListener() {
+        Number_2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        Number_2.setText("2");
+        Number_2.setName("2"); // NOI18N
+        Number_2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton14ActionPerformed(evt);
+                Number_2ActionPerformed(evt);
             }
         });
 
-        jButton15.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jButton15.setText("/");
-        jButton15.setName("/"); // NOI18N
-        jButton15.addActionListener(new java.awt.event.ActionListener() {
+        Number_3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        Number_3.setText("3");
+        Number_3.setName("3"); // NOI18N
+        Number_3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton15ActionPerformed(evt);
+                Number_3ActionPerformed(evt);
+            }
+        });
+
+        Number_4.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        Number_4.setText("4");
+        Number_4.setName("4"); // NOI18N
+        Number_4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Number_4ActionPerformed(evt);
+            }
+        });
+
+        Number_5.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        Number_5.setText("5");
+        Number_5.setToolTipText("");
+        Number_5.setName("5"); // NOI18N
+        Number_5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Number_5ActionPerformed(evt);
+            }
+        });
+
+        Number_8.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        Number_8.setText("8");
+        Number_8.setName("8"); // NOI18N
+        Number_8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Number_8ActionPerformed(evt);
+            }
+        });
+
+        Number_6.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        Number_6.setText("6");
+        Number_6.setName("6"); // NOI18N
+        Number_6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Number_6ActionPerformed(evt);
+            }
+        });
+
+        Number_9.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        Number_9.setText("9");
+        Number_9.setName("9"); // NOI18N
+        Number_9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Number_9ActionPerformed(evt);
+            }
+        });
+
+        Number_7.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        Number_7.setText("7");
+        Number_7.setName("7"); // NOI18N
+        Number_7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Number_7ActionPerformed(evt);
+            }
+        });
+
+        Operation_Multiply.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        Operation_Multiply.setText("*");
+        Operation_Multiply.setToolTipText("");
+        Operation_Multiply.setName("*"); // NOI18N
+        Operation_Multiply.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Operation_MultiplyActionPerformed(evt);
+            }
+        });
+
+        Operation_Minus.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        Operation_Minus.setText("-");
+        Operation_Minus.setName("-"); // NOI18N
+        Operation_Minus.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Operation_MinusActionPerformed(evt);
+            }
+        });
+
+        Operation_Plus.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        Operation_Plus.setText("+");
+        Operation_Plus.setName("+"); // NOI18N
+        Operation_Plus.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Operation_PlusActionPerformed(evt);
+            }
+        });
+
+        Operation_Divide.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        Operation_Divide.setText("/");
+        Operation_Divide.setName("/"); // NOI18N
+        Operation_Divide.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Operation_DivideActionPerformed(evt);
+            }
+        });
+
+        dot.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        dot.setText(".");
+        dot.setName("."); // NOI18N
+        dot.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                dotActionPerformed(evt);
+            }
+        });
+
+        Operation_Equal.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        Operation_Equal.setText("=");
+        Operation_Equal.setName("="); // NOI18N
+        Operation_Equal.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Operation_EqualActionPerformed(evt);
+            }
+        });
+
+        Clear.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        Clear.setText("C");
+        Clear.setName("C"); // NOI18N
+        Clear.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ClearActionPerformed(evt);
+            }
+        });
+
+        Operation_Power.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        Operation_Power.setText("^");
+        Operation_Power.setName("^"); // NOI18N
+        Operation_Power.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Operation_PowerActionPerformed(evt);
+            }
+        });
+
+        Operation_Factorial.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        Operation_Factorial.setLabel("!");
+        Operation_Factorial.setName("^"); // NOI18N
+        Operation_Factorial.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Operation_FactorialActionPerformed(evt);
             }
         });
 
@@ -139,90 +238,209 @@ public class Calculator extends javax.swing.JFrame {
             .add(layout.createSequentialGroup()
                 .addContainerGap()
                 .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                    .add(jTextField1)
+                    .add(TextArea)
                     .add(layout.createSequentialGroup()
+                        .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING)
+                            .add(layout.createSequentialGroup()
+                                .add(Number_5, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 46, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
+                                .add(Number_6, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 46, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                                .add(Number_7, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 46, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
+                                .add(Number_8, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 46, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
+                                .add(Number_9, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 46, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                            .add(layout.createSequentialGroup()
+                                .add(Number_0, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 46, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
+                                .add(Number_1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 46, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                                .add(Number_2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 46, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
+                                .add(Number_3, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 46, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
+                                .add(Number_4, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 46, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
+                        .add(18, 18, 18)
                         .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                            .add(Operation_Equal, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 73, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                             .add(layout.createSequentialGroup()
-                                .add(jButton8, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 46, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                                .add(Clear, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 73, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
-                                .add(jButton10, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 46, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                                .add(jButton12, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 46, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
-                                .add(jButton9, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 46, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
-                                .add(jButton11, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 46, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                            .add(layout.createSequentialGroup()
-                                .add(jButton1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 46, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
-                                .add(jButton3, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 46, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                                .add(jButton4, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 46, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
-                                .add(jButton5, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 46, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
-                                .add(jButton6, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 46, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
-                        .add(0, 0, Short.MAX_VALUE)))
+                                .add(dot, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 46, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))))
                 .addContainerGap())
-            .add(layout.createSequentialGroup()
-                .add(0, 46, Short.MAX_VALUE)
-                .add(jButton14, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 73, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+            .add(org.jdesktop.layout.GroupLayout.TRAILING, layout.createSequentialGroup()
+                .add(36, 36, 36)
+                .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                    .add(Operation_Plus, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 73, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .add(Operation_Power, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 73, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                    .add(org.jdesktop.layout.GroupLayout.TRAILING, Operation_Minus, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 73, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .add(org.jdesktop.layout.GroupLayout.TRAILING, Operation_Factorial, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 73, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
                 .add(18, 18, 18)
-                .add(jButton13, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 73, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .add(Operation_Multiply, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 73, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                 .add(18, 18, 18)
-                .add(jButton7, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 73, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .add(18, 18, 18)
-                .add(jButton15, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 73, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .add(Operation_Divide, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 73, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                 .add(41, 41, 41))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(layout.createSequentialGroup()
                 .addContainerGap()
-                .add(jTextField1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 78, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .add(TextArea, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 78, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                 .add(18, 18, 18)
-                .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                    .add(jButton1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 47, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                    .add(jButton3, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 47, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                    .add(jButton4, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 47, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                    .add(jButton5, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 47, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                    .add(jButton6, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 47, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                    .add(jButton8, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 47, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                    .add(jButton9, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 47, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                    .add(jButton10, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 47, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                    .add(jButton12, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 47, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                    .add(jButton11, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 47, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                    .add(layout.createSequentialGroup()
+                        .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
+                            .add(Number_0, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 47, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                            .add(Number_1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 47, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                            .add(Number_2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 47, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                            .add(Number_3, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 47, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                            .add(Number_4, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 47, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                            .add(Clear, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 46, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                            .add(dot, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 47, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                        .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
+                            .add(Number_8, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 47, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                            .add(Number_7, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 47, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                            .add(Number_9, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 47, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                            .add(Number_6, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 47, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                            .add(Number_5, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 47, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
+                    .add(org.jdesktop.layout.GroupLayout.TRAILING, Operation_Equal, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 46, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                .add(18, 18, 18)
                 .add(jSeparator1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 10, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                 .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                    .add(jButton14, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 46, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                    .add(jButton13, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 46, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                    .add(jButton7, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 46, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                    .add(jButton15, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 46, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(125, Short.MAX_VALUE))
+                    .add(Operation_Plus, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 46, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .add(Operation_Minus, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 46, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .add(Operation_Multiply, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 46, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .add(Operation_Divide, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 46, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                .add(6, 6, 6)
+                .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
+                    .add(Operation_Power, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 46, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .add(Operation_Factorial, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 46, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(68, Short.MAX_VALUE))
         );
+
+        Operation_Factorial.getAccessibleContext().setAccessibleName("!");
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton7ActionPerformed
+    private void Operation_MultiplyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Operation_MultiplyActionPerformed
+       Casio = new MyCalc(Double.parseDouble(TextArea.getText()),'*');
+    }//GEN-LAST:event_Operation_MultiplyActionPerformed
 
-    private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton13ActionPerformed
+    private void Operation_MinusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Operation_MinusActionPerformed
+       Casio = new MyCalc(Double.parseDouble(TextArea.getText()),'-');
+    }//GEN-LAST:event_Operation_MinusActionPerformed
 
-    private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton14ActionPerformed
+    private void Operation_PlusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Operation_PlusActionPerformed
+       Casio = new MyCalc(Double.parseDouble(TextArea.getText()),'+');
+    }//GEN-LAST:event_Operation_PlusActionPerformed
 
-    private void jButton15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton15ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton15ActionPerformed
+    private void Operation_DivideActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Operation_DivideActionPerformed
+               Casio = new MyCalc(Double.parseDouble(TextArea.getText()),'/');
+    }//GEN-LAST:event_Operation_DivideActionPerformed
+
+    private void Number_0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Number_0ActionPerformed
+        String enteredNumber = TextArea.getText()+Number_0.getText();
+        TextArea.setText(enteredNumber);
+    }//GEN-LAST:event_Number_0ActionPerformed
+
+    private void Number_1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Number_1ActionPerformed
+        String enteredNumber = TextArea.getText()+Number_1.getText();
+            TextArea.setText(enteredNumber);        
+    }//GEN-LAST:event_Number_1ActionPerformed
+
+    private void Number_2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Number_2ActionPerformed
+        String enteredNumber = TextArea.getText()+Number_2.getText();
+        TextArea.setText(enteredNumber);
+    }//GEN-LAST:event_Number_2ActionPerformed
+
+    private void Number_3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Number_3ActionPerformed
+         String enteredNumber = TextArea.getText()+Number_3.getText();
+        TextArea.setText(enteredNumber);     
+    }//GEN-LAST:event_Number_3ActionPerformed
+
+    private void Number_4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Number_4ActionPerformed
+        String enteredNumber = TextArea.getText()+Number_4.getText();
+        TextArea.setText(enteredNumber);     
+    }//GEN-LAST:event_Number_4ActionPerformed
+
+    private void Number_5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Number_5ActionPerformed
+        String enteredNumber = TextArea.getText()+Number_5.getText();
+        TextArea.setText(enteredNumber);
+    }//GEN-LAST:event_Number_5ActionPerformed
+
+    private void Number_6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Number_6ActionPerformed
+            String enteredNumber = TextArea.getText()+Number_6.getText();
+           TextArea.setText(enteredNumber);
+    }//GEN-LAST:event_Number_6ActionPerformed
+
+    private void Number_7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Number_7ActionPerformed
+        String enteredNumber = TextArea.getText()+Number_0.getText();
+        TextArea.setText(enteredNumber);      
+    }//GEN-LAST:event_Number_7ActionPerformed
+
+    private void Number_8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Number_8ActionPerformed
+        String enteredNumber = TextArea.getText()+Number_0.getText();
+        TextArea.setText(enteredNumber);        
+    }//GEN-LAST:event_Number_8ActionPerformed
+
+    private void Number_9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Number_9ActionPerformed
+        String enteredNumber = TextArea.getText()+Number_0.getText();
+        TextArea.setText(enteredNumber);        
+    }//GEN-LAST:event_Number_9ActionPerformed
+
+    private void Operation_EqualActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Operation_EqualActionPerformed
+         String answer = "0";
+        Casio.secondNumber= Double.parseDouble(TextArea.getText());
+        if (Casio.Operation == '+')
+        {
+            answer = String.format("%.00f",Casio.Add());
+        }
+        else if (Casio.Operation == '-')
+        {
+            answer = String.format("%.00f",Casio.Subtract());
+        }
+        else if (Casio.Operation == '*')
+        {
+            answer = String.format("%.00f",Casio.Multiply());
+        }
+        else if (Casio.Operation == '/')
+        {  
+            answer = String.format("%.00f",Casio.Division());
+        }
+        else if (Casio.Operation == '^')
+        {  
+            answer = String.format("%.00f",Casio.Power());
+        }
+        else if (Casio.Operation == '!')
+        {  
+            answer = String.format("%.00f",Casio.Factorial());
+        }
+        
+           TextArea.setText(answer);
+    }//GEN-LAST:event_Operation_EqualActionPerformed
+
+    private void dotActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dotActionPerformed
+          String enteredNumber = TextArea.getText()+dot.getText();
+        TextArea.setText(enteredNumber); 
+    }//GEN-LAST:event_dotActionPerformed
+
+    private void ClearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ClearActionPerformed
+        TextArea.setText("");
+    }//GEN-LAST:event_ClearActionPerformed
+
+    private void Operation_PowerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Operation_PowerActionPerformed
+        Casio = new MyCalc(Double.parseDouble(TextArea.getText()),'^');
+    }//GEN-LAST:event_Operation_PowerActionPerformed
+
+    private void Operation_FactorialActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Operation_FactorialActionPerformed
+      Casio = new MyCalc(Double.parseDouble(TextArea.getText()),'!');
+    }//GEN-LAST:event_Operation_FactorialActionPerformed
 
     /**
      * @param args the command line arguments
@@ -260,23 +478,28 @@ public class Calculator extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton10;
-    private javax.swing.JButton jButton11;
-    private javax.swing.JButton jButton12;
-    private javax.swing.JButton jButton13;
-    private javax.swing.JButton jButton14;
-    private javax.swing.JButton jButton15;
+    private javax.swing.JButton Clear;
+    private javax.swing.JButton Number_0;
+    private javax.swing.JButton Number_1;
+    private javax.swing.JButton Number_2;
+    private javax.swing.JButton Number_3;
+    private javax.swing.JButton Number_4;
+    private javax.swing.JButton Number_5;
+    private javax.swing.JButton Number_6;
+    private javax.swing.JButton Number_7;
+    private javax.swing.JButton Number_8;
+    private javax.swing.JButton Number_9;
+    private javax.swing.JButton Operation_Divide;
+    private javax.swing.JButton Operation_Equal;
+    private javax.swing.JButton Operation_Factorial;
+    private javax.swing.JButton Operation_Minus;
+    private javax.swing.JButton Operation_Multiply;
+    private javax.swing.JButton Operation_Plus;
+    private javax.swing.JButton Operation_Power;
+    private javax.swing.JTextField TextArea;
+    private javax.swing.JButton dot;
     private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton7;
-    private javax.swing.JButton jButton8;
-    private javax.swing.JButton jButton9;
     private javax.swing.JSeparator jSeparator1;
-    private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
 
 }
