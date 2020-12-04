@@ -458,7 +458,7 @@ public class Calculator extends javax.swing.JFrame {
     }//GEN-LAST:event_Operation_FactorialActionPerformed
 
     private void Operation_ModulusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Operation_ModulusActionPerformed
-        Casio = new MyCalc(Double.ParseDouble(TextArea0getText()),'%');
+        Casio = new MyCalc(Double.parseDouble(TextArea.getText()),'%');
     }//GEN-LAST:event_Operation_ModulusActionPerformed
 
     /**
