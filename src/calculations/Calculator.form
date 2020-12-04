@@ -89,9 +89,14 @@
                   <Component id="Operation_Factorial" alignment="1" min="-2" pref="73" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Component id="Operation_Multiply" min="-2" pref="73" max="-2" attributes="0"/>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Component id="Operation_Divide" min="-2" pref="73" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <Component id="Operation_Multiply" min="-2" pref="73" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="Operation_Divide" min="-2" pref="73" max="-2" attributes="0"/>
+                  </Group>
+                  <Component id="Operation_Modulus" min="-2" pref="73" max="-2" attributes="0"/>
+              </Group>
               <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
           </Group>
       </Group>
@@ -137,6 +142,7 @@
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="Operation_Power" alignment="3" min="-2" pref="46" max="-2" attributes="0"/>
                   <Component id="Operation_Factorial" alignment="3" min="-2" pref="46" max="-2" attributes="0"/>
+                  <Component id="Operation_Modulus" alignment="3" min="-2" pref="46" max="-2" attributes="0"/>
               </Group>
               <EmptySpace pref="68" max="32767" attributes="0"/>
           </Group>
@@ -380,11 +386,20 @@
         <Property name="label" type="java.lang.String" value="!"/>
         <Property name="name" type="java.lang.String" value="^" noResource="true"/>
       </Properties>
-      <AccessibilityProperties>
-        <Property name="AccessibleContext.accessibleName" type="java.lang.String" value="!"/>
-      </AccessibilityProperties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Operation_FactorialActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="Operation_Modulus">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Tahoma" size="14" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Mod"/>
+        <Property name="name" type="java.lang.String" value="Mod" noResource="true"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Operation_ModulusActionPerformed"/>
       </Events>
     </Component>
   </SubComponents>

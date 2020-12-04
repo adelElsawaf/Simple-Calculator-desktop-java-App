@@ -47,6 +47,7 @@ public class Calculator extends javax.swing.JFrame {
         Clear = new javax.swing.JButton();
         Operation_Power = new javax.swing.JButton();
         Operation_Factorial = new javax.swing.JButton();
+        Operation_Modulus = new javax.swing.JButton();
 
         jButton2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jButton2.setText("1");
@@ -230,6 +231,15 @@ public class Calculator extends javax.swing.JFrame {
             }
         });
 
+        Operation_Modulus.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        Operation_Modulus.setText("Mod");
+        Operation_Modulus.setName("Mod"); // NOI18N
+        Operation_Modulus.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Operation_ModulusActionPerformed(evt);
+            }
+        });
+
         org.jdesktop.layout.GroupLayout layout = new org.jdesktop.layout.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -279,9 +289,12 @@ public class Calculator extends javax.swing.JFrame {
                     .add(org.jdesktop.layout.GroupLayout.TRAILING, Operation_Minus, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 73, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                     .add(org.jdesktop.layout.GroupLayout.TRAILING, Operation_Factorial, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 73, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
                 .add(18, 18, 18)
-                .add(Operation_Multiply, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 73, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .add(18, 18, 18)
-                .add(Operation_Divide, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 73, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                    .add(layout.createSequentialGroup()
+                        .add(Operation_Multiply, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 73, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                        .add(18, 18, 18)
+                        .add(Operation_Divide, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 73, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                    .add(Operation_Modulus, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 73, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
                 .add(41, 41, 41))
         );
         layout.setVerticalGroup(
@@ -319,11 +332,10 @@ public class Calculator extends javax.swing.JFrame {
                 .add(6, 6, 6)
                 .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
                     .add(Operation_Power, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 46, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                    .add(Operation_Factorial, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 46, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                    .add(Operation_Factorial, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 46, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .add(Operation_Modulus, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 46, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(68, Short.MAX_VALUE))
         );
-
-        Operation_Factorial.getAccessibleContext().setAccessibleName("!");
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -421,7 +433,10 @@ public class Calculator extends javax.swing.JFrame {
         {  
             answer = String.format("%.00f",Casio.Factorial());
         }
-        
+        else if (Casio.Operation == '%')
+        {  
+            answer = String.format("%.00f",Casio.Modulus());
+        }
            TextArea.setText(answer);
     }//GEN-LAST:event_Operation_EqualActionPerformed
 
@@ -441,6 +456,10 @@ public class Calculator extends javax.swing.JFrame {
     private void Operation_FactorialActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Operation_FactorialActionPerformed
       Casio = new MyCalc(Double.parseDouble(TextArea.getText()),'!');
     }//GEN-LAST:event_Operation_FactorialActionPerformed
+
+    private void Operation_ModulusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Operation_ModulusActionPerformed
+        Casio = new MyCalc(Double.ParseDouble(TextArea0getText()),'%');
+    }//GEN-LAST:event_Operation_ModulusActionPerformed
 
     /**
      * @param args the command line arguments
@@ -493,6 +512,7 @@ public class Calculator extends javax.swing.JFrame {
     private javax.swing.JButton Operation_Equal;
     private javax.swing.JButton Operation_Factorial;
     private javax.swing.JButton Operation_Minus;
+    private javax.swing.JButton Operation_Modulus;
     private javax.swing.JButton Operation_Multiply;
     private javax.swing.JButton Operation_Plus;
     private javax.swing.JButton Operation_Power;
