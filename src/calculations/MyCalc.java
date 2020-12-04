@@ -64,4 +64,9 @@ public class MyCalc {
          }
          return Result;
     }
+    double Modulus()
+    {
+        Result = firstNumber % secondNumber;
+        return Result;
+    }
 }
